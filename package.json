@@ -1,0 +1,27 @@
+{
+  "name": "stv-retro-tv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "复古小电视 - 反混淆还原版",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "core-js": "^3.6.5",
+    "video.js": "7.11.8",
+    "vue": "2.6.12"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "~4.5.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.1.0",
+    "vue-template-compiler": "2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
