@@ -194,12 +194,13 @@ export default {
   created() {
     const baseUrl = '.'
     // 拉取站点信息（标题、赞赏码、文案）
-    axios.get(`${baseUrl}/info`).then((res) => {
+    // 用 .json 后缀：GitHub Pages 是纯静态托管，/info 会 404，/info.json 才能命中
+    axios.get(`${baseUrl}/info.json`).then((res) => {
       if (res.data) this.info = res.data
     }).catch((err) => console.log(err))
 
     // 拉取视频源列表
-    axios.get(`${baseUrl}/media`).then((res) => {
+    axios.get(`${baseUrl}/media.json`).then((res) => {
       if (res.data && res.data.length > 0) {
         this.mediaList = res.data
         this.setupPlayer()

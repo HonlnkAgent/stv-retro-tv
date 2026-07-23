@@ -16,12 +16,12 @@ module.exports = {
       ignored: /node_modules/
     },
     before(app) {
-      // mock /info
-      app.get('/info', (req, res) => {
+      // mock /info.json （组件请求带 .json 后缀，与 Pages 静态托管一致）
+      app.get('/info.json', (req, res) => {
         res.json(require('./public/info.json'))
       })
-      // mock /media
-      app.get('/media', (req, res) => {
+      // mock /media.json
+      app.get('/media.json', (req, res) => {
         res.json(require('./public/media.json'))
       })
     }
